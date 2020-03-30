@@ -44,14 +44,14 @@ int main()
 {
     int n;
     scanf("%d", &n);
-    box *boxes = malloc(n * sizeof(box));
+    box *boxes = malloc(n * sizeof(box));//or we can write "box boxes[n];"
     for (int i = 0; i < n; i++) {
         scanf("%d%d%d", &boxes[i].length, &boxes[i].width, &boxes[i].height);
     }
     for (int i = 0; i < n; i++) {
         if (is_lower_than_max_height(boxes[i])) {
-            printf("%d\n", get_volume(boxes[i]));
-        }
+            printf("%d\n", get_volume(boxes[i]));//here we have passed the value its containing
+        }                                        //or by "*(boxes +i)"
     }
     return 0;
 }
