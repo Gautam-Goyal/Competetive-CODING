@@ -51,7 +51,7 @@ int main()
     for (int i = 0; i < n; i++) {
         if (is_lower_than_max_height(boxes[i])) {
             printf("%d\n", get_volume(boxes[i]));//here we have passed the value its containing
-        }                                        // or by "*(boxes +i)"
+        }                                        //or by "*(boxes +i)"
     }
     return 0;
 }
